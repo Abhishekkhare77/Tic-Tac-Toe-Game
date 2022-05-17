@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+    color:white;
+}
+nav{
+    background-color: rgb(74, 67, 67);
+}
+nav ul{
+    font-family: 'Lobster', cursive;
+    padding:20px;
+    list-style: none;
+    color:white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.line{
+    background-color: red;
+    height:3px;
+    width:0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+.gameContainer{
+    /* background-color: purple; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box{
+    font-size: 7vw;
+    border:2px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgba(126, 134, 22, 0.301);
+}
+.gameInfo{
+    font-family: 'Josefin Sans', sans-serif;
+    padding:30px;
+}
+.imgbox img{
+    width:0;
+    transition: width 1s ease-in-out;
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom:0;
+}
+.br-0{
+    border-right:0;
+}
+.bl-0{
+    border-left:0;
+}
+#reset{
+    margin:20px;
+    padding:12px;
+    border:2px solid white;
+    color:greenyellow;
+    background-color: black;
+    cursor: pointer;
+    border-radius:12px;
+}
+#reset:hover{
+    background-color: white;
+    color:black;
+}
+@media screen and (max-width:800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .container{
+        grid-template-rows: repeat(3,21vw);
+        grid-template-columns: repeat(3,21vw);
+    }
+    .line{
+        display: none;
+    }
+}
